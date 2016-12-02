@@ -1,0 +1,13 @@
+{
+  "name": "subscribe",
+  "version": "1.0.0",
+  "description": "Publish Data to server",
+  "main": "app.js",
+  "scripts": {
+    "start":"npm install;node app.js"
+  },
+  "dependencies": {
+      "socket.io":"*",
+       "q": "*"
+  }
+}
