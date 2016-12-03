@@ -3,9 +3,8 @@
 var fs = require('fs');
 var q = require('q');
 var http = require('http');
-var io = require('socket.io');
 var server = http.createServer()
-var socket = io.listen(server);
+var socket = require('socket.io').listen(server);
 var number = 1;
 var notCalled = true;
 var lines = [];
@@ -50,5 +49,8 @@ socket.on('connection', function(socket) {
 
 server.listen(3000, function() {
     console.log('Listening at: http://localhost:3000');
-    printData();
+    setTimeout(function() {
+        printData()
+    }, 3000)
+
 });
